@@ -9,6 +9,7 @@ Stood up hello worlds form the docs for: 1) Angular; 2) React; and 3) Vue using 
 
 All applications were built with defaults and each application includes one component. Any framework specific media or assets were removed for consistency. Further, prod builds can be found in /dist for ng and vue and /build in react.
 
+
 # Results
 tbd
 
