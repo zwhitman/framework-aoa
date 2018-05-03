@@ -15,6 +15,6 @@ tbd
 ## modules
 
 ## prod builds <- defaults (no tuning):
-react: 3.4 kb
-ng: 65.1 kb
-vue: 2.5 mb
+1. react: 3.4 kb
+2. vue: 65.1 kb
+3. ng: 2.5 mb
