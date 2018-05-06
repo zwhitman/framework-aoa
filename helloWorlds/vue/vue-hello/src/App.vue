@@ -1,19 +1,23 @@
 <template>
   <div id="app">
-    <HelloWorld msg="cedsci hello world"/>
+    <router-link to="/" exact>Home</router-link>
+    <router-link to="/vue-HelloWorld">Main</router-link>
+    <router-link to="/vue-subComp">Sub</router-link>
+    <router-view class="view"></router-view>
   </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'app',
-  components: {
-    HelloWorld
-  }
-}
-</script>
-
 <style>
+body {
+  padding: 0;
+  margin: 0;
+}
+a {
+  margin-right: 10px;
+}
+.view {
+  height:100vh;
+  width:100vw;
+  background-color:lightgrey;
+}
 </style>

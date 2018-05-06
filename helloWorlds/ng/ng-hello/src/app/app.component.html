@@ -1,6 +1,8 @@
-<!--The content below is only a placeholder and can be replaced.-->
+<nav>
+    <a routerLink="/" routerLinkActive="active">Home</a>
+    <a routerLink="/main" routerLinkActive="active">Main</a>
+    <a routerLink="/sub" routerLinkActive="active">Sub</a>
+  </nav>
 <div class="the-div">
-  <h1>
-    {{ title }}
-  </h1>
+  <router-outlet></router-outlet>
 </div>
