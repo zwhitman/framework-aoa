@@ -74,8 +74,8 @@ tbd
   - reload no cache: 106 KB
   - reload w/ cache 2.6 KB
 3. ng:
-  - no cache: 3.0 MB
-  - reload no cache: 3.0 MB
+  - no cache: 314 KB
+  - reload no cache: 314 KB
   - reload w/ cache: 799 B
 
 # Appendix A
