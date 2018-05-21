@@ -98,7 +98,7 @@ The EDDE technical team is comprised of a combination of federal and contracting
 - Zach Whitman
 
 # Market Analysis
-There are dozens of web application JavaScript frameworks available ([1](cite1),[2](cite2),[3](cite3)), that each have different benefits and drawbacks given the EDDE use case. Given the sheer number of potential frameworks, the EDDE technical team removed js frameworks that were either deemed too new, experimental, or lacking a dedicated development team. This initial preselection left the following frameworks for initial consideration:
+There are dozens of web application JavaScript frameworks available ([1](#references),[2](#references),[3](#references)), that each have different benefits and drawbacks given the EDDE use case. Given the sheer number of potential frameworks, the EDDE technical team removed js frameworks that were either deemed too new, experimental, or lacking a dedicated development team. This initial preselection left the following frameworks for initial consideration:
 
 -	Angular
 -	Backbone
@@ -110,7 +110,7 @@ There are dozens of web application JavaScript frameworks available ([1](cite1),
 -	React
 -	Vue
 
-Following the preselection, the EDDE team concluded that a second round down-select was necessary, and that the top three most popular frameworks should be given further consideration. The decision to focus on these three was driven by a number of factors, but the primary drivers were: 1) popularity; and 2) industry adoption. Though there’s no single definitive metric to measure popularity and adoption a survey of community writing and discussions seems to indicate that Angular (5.x) and React (16.x) are roughly equally popular and Vue (2.x) is less so, but gaining very quickly ([4](cite4)). All three libraries are open source and released under a 2-clause MIT license.
+Following the preselection, the EDDE team concluded that a second round down-select was necessary, and that the top three most popular frameworks should be given further consideration. The decision to focus on these three was driven by a number of factors, but the primary drivers were: 1) popularity; and 2) industry adoption. Though there’s no single definitive metric to measure popularity and adoption a survey of community writing and discussions seems to indicate that Angular (5.x) and React (16.x) are roughly equally popular and Vue (2.x) is less so, but gaining very quickly ([4](#references)). All three libraries are open source and released under a 2-clause MIT license.
 
 The table below summarizes some of information with details in following sections.
 
@@ -139,24 +139,24 @@ Angular-based software (components and applications) are written in TypeScript. 
 -	**Advantages:** compile-time support for traditional OOP features including classes (inheritance, encapsulation, etc) static type checking, and generics.  
 -	**Disadvantages:** a significant investment to integrate and maintain tooling in the development lifecycle, both on developer’s workstations/VDI and server-side.
 
-Angular is prescriptive with respect to routing and state management ([5](cite5),[6](cite6)).  Though community alternatives exist (it is possible to use Redux with Angular), by convention there is an Angular-prescribed method.  This has the benefit that functionality like deep linking may be available by default (depending on requirements), however, it is less flexible and that may be an issue when trying to achieve custom behavior or address performance problems.
+Angular is prescriptive with respect to routing and state management ([5](#references),[6](#references)).  Though community alternatives exist (it is possible to use Redux with Angular), by convention there is an Angular-prescribed method.  This has the benefit that functionality like deep linking may be available by default (depending on requirements), however, it is less flexible and that may be an issue when trying to achieve custom behavior or address performance problems.
 
 ### Learning Curve
-One thing that seems to be generally accepted is that Angular has a very steep learning curve ([4](cite4),[7](cite7),[8](cite8)). One potential reason for this is that Angular has much in common with an application development platform and for all intents and purposes, developers must use Angular’s tooling in order to produce a component and/or application.
+One thing that seems to be generally accepted is that Angular has a very steep learning curve ([4](#references),[7](#references),[8](#references)). One potential reason for this is that Angular has much in common with an application development platform and for all intents and purposes, developers must use Angular’s tooling in order to produce a component and/or application.
 
 ### Components
 By convention, developers develop Angular components and then build an application by tying those components together. Based on internal discussions with the EDDE technical team, Angular does support creating standalone components which can be consumed by other Census or 3rd party developers in HTML via a “script” element or import instruction without any runtime dependency on Angular or its toolchain.
 
 ### Templates
-In Angular each component serves the role of controller and viewmodel, and templates serve as the view.  Templates are interpolated HTML and use the defacto standard mustache-style syntax ([9](cite9)).
+In Angular each component serves the role of controller and viewmodel, and templates serve as the view.  Templates are interpolated HTML and use the defacto standard mustache-style syntax ([9](#references)).
 
 ### CSS Management
-By convention Angular encourages developers use component-scoped CSS, such that styling is tied to each component ([10](cite10)).  However, it does support global styling as well. Because templates are a superset of HTML you can simply include a “<link>” element.  Angular relies on webpack to manage global styling ([11](cite11)).  It does not appear to prescribe a preprocessor but angular-cli does support three: SASS, LESS, and STYLUS.
+By convention Angular encourages developers use component-scoped CSS, such that styling is tied to each component ([10](#references)).  However, it does support global styling as well. Because templates are a superset of HTML you can simply include a “<link>” element.  Angular relies on webpack to manage global styling ([11](#references)).  It does not appear to prescribe a preprocessor but angular-cli does support three: SASS, LESS, and STYLUS.
 
 ### Performance
-The load time performance of an Angular application is highly dependent on its size.  Based on my reading, as long as the tools are used correctly a simple Angular 5 application can be reasonably small –on the order of 100KB ([12](cite12),[13](cite13)).  This is on par with React.
+The load time performance of an Angular application is highly dependent on its size.  Based on my reading, as long as the tools are used correctly a simple Angular 5 application can be reasonably small –on the order of 100KB ([12](#references),[13](#references)).  This is on par with React.
 
-Based on my reading good runtime performance of an Angular application is highly dependent on the developer understanding Angular internals and tuning code appropriately ([14](cite14)).
+Based on my reading good runtime performance of an Angular application is highly dependent on the developer understanding Angular internals and tuning code appropriately ([14](#references)).
 
 ## React
 React is a JavaScript XML (JSX) based open-source framework for the development of single-page web applications created by Jordan Walke, a software engineer at Facebook.
@@ -164,57 +164,57 @@ React is a JavaScript XML (JSX) based open-source framework for the development 
 ### Development Paradigm, Tooling, and Lifecycle
 React-based components and applications are developed in JSX.  JSX is basically just JavaScript with embedded HTML fragments.  Components override a class “render” method in order to return the component’s view (an HTML fragment).   React manages a virtual DOM – an in-memory data structure which makes it appear as though the entire page (DOM) is re-rendered whenever anything changes.  However, behind the scenes React is doing “diff” and only updating the parts that have actually changed.
 Unlike Angular, React is not prescriptive.  It does not prefer specific routing and state management, and a number of community solutions exist .  This has the advantage of choice but the disadvantage that a different group of developers other than the framework itself maintains the (effectively required) functionality.
-There is an NPM managed “CLI” application for React developed by a 3rd party ([15](cite15)).
+There is an NPM managed “CLI” application for React developed by a 3rd party ([15](#references)).
 
 ### Learning curve
 There doesn’t seem to be a consensus, and I don’t see any good way of objectively evaluating it, but my interpretation of what I read is that React has a shallower learning curve than Angular.  React is, at its core, just a JavaScript library.  A developer can simply include it, create a class with a render method, and let React take over executing callbacks as necessary.  A developer needs to understand events handling, state management, routing, etc. in order to implement an application, of course.  However, the basic idea is very much like a traditional framework (with callbacks).
 
 ### Components
-Developers create React components by extending “React.Component” and implementing a render method.  An application is built by composition ([16](cite16)).  Because this is implemented at runtime, by definition, other Census developers or 3rd party developers would have to also include React via an HTML “script” element or import statement in order to use CEDSCI/EDDE components.
+Developers create React components by extending “React.Component” and implementing a render method.  An application is built by composition ([16](#references)).  Because this is implemented at runtime, by definition, other Census developers or 3rd party developers would have to also include React via an HTML “script” element or import statement in order to use CEDSCI/EDDE components.
 
 ### Templates
 React does not offer templates in the traditional sense (as Angular and Vue do).  In React the UI of a component is always expressed as a render function.  This is very powerful but it can lead to increased complexity (e.g. more code to accomplish the same thing).
 
 ### CSS management
-React supports component-scoped CSS and CSS is usually implemented by putting it inside JavaScript (so called CSS-in-JS). If you want to build React components that can be reused by others then CSS-in-JS is mandatory ([17](cite17)).  JavaScript/runtime application of CSS is very powerful but comes with increased runtime size and complexity.
+React supports component-scoped CSS and CSS is usually implemented by putting it inside JavaScript (so called CSS-in-JS). If you want to build React components that can be reused by others then CSS-in-JS is mandatory ([17](#references)).  JavaScript/runtime application of CSS is very powerful but comes with increased runtime size and complexity.
 
-For an application, one could reasonably store CSS externally and import it.  That would allow the use of 3rd party preprocessors such as SASS ([17](cite17)).
+For an application, one could reasonably store CSS externally and import it.  That would allow the use of 3rd party preprocessors such as SASS ([17](#references)).
 
 
 ### Performance
-The load time performance of a React-based application is highly dependent on its size, of course.  The production revision of React (minified and gzipped) is 42KB ([18](cite18)).
+The load time performance of a React-based application is highly dependent on its size, of course.  The production revision of React (minified and gzipped) is 42KB ([18](#references)).
 
-Though it may require developer optimization, such as the use of immutable data structures, runtime performance is on par with Angular and Vue ([19](cite19)).
+Though it may require developer optimization, such as the use of immutable data structures, runtime performance is on par with Angular and Vue ([19](#references)).
 
 
 ## Vue
 Vue.js (or just Vue) is an open-source JavaScript framework for building user interfaces. Integration into projects that use other JavaScript libraries is relatively easy because it is designed to be incrementally adoptable. Vue was created by Evan You, a former Google employee, based on his experience with AngularJS.
 
-While Vue does not have a corporate entity driving its development it is used by a number of well-known companies ([20](cite20)) including: Netflix, Adobe, Alibaba, Nintendo ([21](cite21)), and GitLab ([22](cite22)).
+While Vue does not have a corporate entity driving its development it is used by a number of well-known companies ([20](#references)) including: Netflix, Adobe, Alibaba, Nintendo ([21](#references)), and GitLab ([22](#references)).
 
 ### Development Paradigm
-Vue-based applications and components are developed in HTML and JavaScript. Vue components may either be instantiated directly in JavaScript or by making use of custom HTML elements ([23](cite23)). Vue uses a Virtual DOM to manage the view/display state (much like React).
+Vue-based applications and components are developed in HTML and JavaScript. Vue components may either be instantiated directly in JavaScript or by making use of custom HTML elements ([23](#references)). Vue uses a Virtual DOM to manage the view/display state (much like React).
 
-Vue takes a middle-ground approach to prescribing routing and state management solutions. You can use anything you want (even roll your own) but the Vue developers have official routing ([24](cite24)) and state management ([25](cite25)) implementations.
+Vue takes a middle-ground approach to prescribing routing and state management solutions. You can use anything you want (even roll your own) but the Vue developers have official routing ([24](#references)) and state management ([25](#references)) implementations.
 
-With Vue, the command line tools are optional though recommended ([26](cite26)) to help facilitate using it with webpack and other popular tools. Vue-cli is a JavaScript application installable via NPM or YARN.
+With Vue, the command line tools are optional though recommended ([26](#references)) to help facilitate using it with webpack and other popular tools. Vue-cli is a JavaScript application installable via NPM or YARN.
 
 ### Learning curve
-Vue has a reputation for being easy to learn ([27](cite27),[28](cite28),[29](cite 29),[30](cite 30)).
+Vue has a reputation for being easy to learn ([27](#references),[28](#references),[29](#references),[30](#references)).
 
 ### Components
-Developers create Vue components in JavaScript by extending “Vue.component()” and passing in an declarative Object which defines the component. An application is built by composition. Vue does not make a distinction between a component and a container (as React does); however, it may be useful to impose one ourselves ([31](cite 31)). Because component definition is implemented at runtime other Census developers or 3rd party developers would have to also include Vue in order to use CEDSCI/EDDE components.
+Developers create Vue components in JavaScript by extending “Vue.component()” and passing in an declarative Object which defines the component. An application is built by composition. Vue does not make a distinction between a component and a container (as React does); however, it may be useful to impose one ourselves ([31](#references)). Because component definition is implemented at runtime other Census developers or 3rd party developers would have to also include Vue in order to use CEDSCI/EDDE components.
 
 ### Templates
-Vue uses an HTML-based template syntax that allows you to declaratively bind the rendered DOM to the underlying Vue instance’s data ([32](cite32)). All Vue templates are valid HTML. Under the hood, Vue compiles the templates into virtual DOM render functions. Combined with the reactivity system, Vue is able to calculate the minimal number of components to re-render and apply the minimal amount of DOM manipulations when the app state changes; this is very similar to React. In Vue, you can use the template syntax or write render functions using JSX.
+Vue uses an HTML-based template syntax that allows you to declaratively bind the rendered DOM to the underlying Vue instance’s data ([32](#references)). All Vue templates are valid HTML. Under the hood, Vue compiles the templates into virtual DOM render functions. Combined with the reactivity system, Vue is able to calculate the minimal number of components to re-render and apply the minimal amount of DOM manipulations when the app state changes; this is very similar to React. In Vue, you can use the template syntax or write render functions using JSX.
 
 ### CSS Management
-Vue doesn’t prescribe a specific CSS management strategy, however, it does recommend some ([33](cite33)). Like Angular, it has support for component-scoped CSS in order to localize management when applicable. In addition, it works well with preprocessors.
+Vue doesn’t prescribe a specific CSS management strategy, however, it does recommend some ([33](#references)). Like Angular, it has support for component-scoped CSS in order to localize management when applicable. In addition, it works well with preprocessors.
 
 ### Performance
-The load time performance of a Vue-based application is highly dependent on its size, of course. The production revision of Vue (minified and gzipped) is 31KB ([34](cite34)).
+The load time performance of a Vue-based application is highly dependent on its size, of course. The production revision of Vue (minified and gzipped) is 31KB ([34](#references)).
 
-Runtime performance is on par with Angular and React ([19](cite19)). Unlike React, Vue tracks Virtual DOM dependences automatically ([35](cite35)) freeing developers from doing so.
+Runtime performance is on par with Angular and React ([19](#references)). Unlike React, Vue tracks Virtual DOM dependences automatically ([35](#references)) freeing developers from doing so.
 
 # Hello World
 As part of the EDDE team's assessment of Angular, React, and Vue, the team built 'hello world' application instances using each framework as a means to better determine their suitability to EDDE.
@@ -312,111 +312,40 @@ After the team agreed to focus on the non-Angular options, the points of distinc
 
 
 # References
-<span id="cite1">
-  1. Various. List of JavaScript libraries. s.l. : https://en.wikipedia.org/wiki/List_of_JavaScript_libraries#Web-application_related_(MVC,_MVVM).
-</span>
-<span id="cite2">
-  2. Shilova, Margarita. JavaScript frameworks you should know. s.l. : https://apiumhub.com/tech-blog-barcelona/top-javascript-frameworks/.
-</span>
-<span id="cite3">
-  3. Various. Comparison of JavaScript frameworks. s.l. : https://en.wikipedia.org/wiki/Comparison_of_JavaScript_frameworks.
-</span>
-<span id="cite4">
+
+1. Various. List of JavaScript libraries. s.l. : https://en.wikipedia.org/wiki/List_of_JavaScript_libraries#Web-application_related_(MVC,_MVVM).
+2. Shilova, Margarita. JavaScript frameworks you should know. s.l. : https://apiumhub.com/tech-blog-barcelona/top-javascript-frameworks/.
+3. Various. Comparison of JavaScript frameworks. s.l. : https://en.wikipedia.org/wiki/Comparison_of_JavaScript_frameworks.
 4. Hannah, John. The Ultimate Guide to JavaScript Frameworks. s.l. : https://javascriptreport.com/the-ultimate-guide-to-javascript-frameworks/.
-</span>
-<span id="cite5">
 5. Medium. Angular 2 vs React: The Ultimate Dance Off. s.l. : https://medium.com/javascript-scene/angular-2-vs-react-the-ultimate-dance-off-60e7dfbc379c, 2016.
-</span>
-<span id="cite6">
 6. Cabot Technology. A Comparative Study of Progressive JS Frameworks: Angular.js & Vue.js. s.l. : https://hackernoon.com/a-comparative-study-of-progressive-js-frameworks-angular-js-vue-js-4ebda3904f8f, 2017.
-</span>
-<span id="cite7">
 7. Reddit. Steep learning curve for Angular 2. s.l. : https://www.reddit.com/r/Angular2/comments/5hlw5p/steep_learning_curve_for_angular_2/.
-</span>
-<span id="cite8">
 8. Alexsoft. The Good and the Bad of Angular Development. s.l. : https://www.altexsoft.com/blog/engineering/the-good-and-the-bad-of-angular-development/.
-</span>
-<span id="cite9">
 9. Angular.io. Angular Template Syntax. s.l. : https://angular.io/guide/template-syntax.
-</span>
-<span id="cite10">
 10. Blog, Angular.io. The State of CSS in Angular. s.l. : https://blog.angular.io/the-state-of-css-in-angular-4a52d4bd2700.
-</span>
-<span id="cite11">
 11. Angular In Depth. This is how angular-cli/webpack delivers your CSS styles to the client. s.l. : https://blog.angularindepth.com/this-is-how-angular-cli-webpack-delivers-your-css-styles-to-the-client-d4adf15c4975, 2018.
-</span>
-<span id="cite12">
 12. VueJS.org. Comparison with Other Frameworks. s.l. : https://vuejs.org/v2/guide/comparison.html.
-</span>
-<span id="cite13">
 13. Reddit. My experience today re: Angular vs. Vue bundle size. s.l. : https://www.reddit.com/r/Angular2/comments/7e2upr/my_experience_today_re_angular_vs_vue_bundle_size/, 2017.
-</span>
-<span id="cite14">
 14. Spears, Paul. Angular Runtime Performance Guide. s.l. : https://blog.oasisdigital.com/2017/angular-runtime-performance-guide/, 2017.
-</span>
-<span id="cite15">
 15. Abramov, Dan. Create Apps with No Configuration. s.l. : https://reactjs.org/blog/2016/07/22/create-apps-with-no-configuration.html, 2016.
-</span>
-<span id="cite16">
 16. ReactJS.org. Composition vs Inheritance. s.l. : https://reactjs.org/docs/composition-vs-inheritance.html.
-</span>
-<span id="cite17">
 17. Menubar.io. 5 Ways To Style React Components. s.l. : https://www.menubar.io/5-ways-to-style-react-components, 2108.
-</span>
-<span id="cite18">
 18. Restuta. Sizes of JS frameworks, just minified + minified and gzipped. s.l. : https://gist.github.com/Restuta/cda69e50a853aa64912d, 2017.
-</span>
-<span id="cite19">
 19. Stefankrause. Results for js web frameworks benchmark – round 7. s.l. : http://www.stefankrause.net/js-frameworks-benchmark7/table.html, 2018.
-</span>
-<span id="cite20">
 20. Netguru.co. 13 Top Companies That Have Trusted Vue.js – Examples of Applications. s.l. : https://www.netguru.co/blog/13-top-companies-that-have-trusted-vue.js-examples-of-applications, 2018.
-</span>
-<span id="cite21">
 21. Sloboda Studio. Should You Choose VueJS Over React? s.l. : https://sloboda-studio.com/blog/should-you-choose-vuejs-over-react/, 2018.
-</span>
-<span id="cite22">
 22. GitLab. Why We Chose Vue.js. s.l. : https://about.gitlab.com/2016/10/20/why-we-chose-vue/, 2016.
-</span>
-<span id="cite23">
 23. Vue. Components Basics. s.l. : https://vuejs.org/v2/guide/components.html, 2018.
-</span>
-<span id="cite24">
-24. —. Routing. s.l. : https://vuejs.org/v2/guide/routing.html, 2018.
-</span>
-<span id="cite25">
-25. —. State Management. s.l. : https://vuejs.org/v2/guide/state-management.html, 2018.
-</span>
-<span id="cite26">
-26. —. Announcing vue-cli. s.l. : https://vuejs.org/2015/12/28/vue-cli/, 2015.
-</span>
-<span id="cite27">
+24. Routing. s.l. : https://vuejs.org/v2/guide/routing.html, 2018.
+25. State Management. s.l. : https://vuejs.org/v2/guide/state-management.html, 2018.
+26. Announcing vue-cli. s.l. : https://vuejs.org/2015/12/28/vue-cli/, 2015.
 27. Reddit. Between React and Vue.js, which is easier to learn? s.l. : https://www.reddit.com/r/javascript/comments/45gwer/between_react_and_vuejs_which_is_easier_to_learn/, 2016.
-</span>
-<span id="cite28">
-28. —. Why is Vue so easy? s.l. : https://www.reddit.com/r/vuejs/comments/774dn7/why_is_vue_so_easy/, 2017.
-</span>
-<span id="cite29">
+28. Why is Vue so easy? s.l. : https://www.reddit.com/r/vuejs/comments/774dn7/why_is_vue_so_easy/, 2017.
 29. Medium. Top Tutorials To Learn Vue Js For Beginners. s.l. : https://medium.com/quick-code/top-tutorials-to-learn-vue-js-for-beginners-6c693e41091d, 2018.
-</span>
-<span id="cite30">
 30. Gore, Anthony. Vue.js is easier to learn than jQuery. s.l. : https://medium.com/js-dojo/vue-js-is-easier-to-learn-than-jquery-abbbb9c12cf8, 2016.
-</span>
-<span id="cite31">
 31. Balk, Alex. Structure a Vue.js App from Containers and Components. s.l. : https://www.outbrain.com/techblog/2017/12/structure-a-vue-js-app-from-containers-and-components/, 2017.
-</span>
-<span id="cite32">
 32. Various. Vue.js. s.l. : https://en.wikipedia.org/wiki/Vue.js, 2018.
-</span>
-<span id="cite33">
 33. Vue. CSS Management. s.l. : https://ssr.vuejs.org/en/css.html, 2018.
-</span>
-<span id="cite34">
-34. —. Installation. s.l. : https://vuejs.org/v2/guide/installation.html, 2018.
-</span>
-<span id="cite35">
+34. Installation. s.l. : https://vuejs.org/v2/guide/installation.html, 2018.
 35. Kemp, Jonathan. Get More Done with Vue.js: Vue and Performance. s.l. : https://jonkemp.com/javascript/get-done-vue-js-vue-performance.html, 2017.
-</span>
-<span id="cite36">
 36. State Of JS. Front-end Frameworks – Results. s.l. : https://stateofjs.com/2017/front-end/results, 2017.
-</span>
