@@ -114,21 +114,21 @@ Following the preselection, the EDDE team concluded that a second round down-sel
 
 The table below summarizes some of information with details in following sections.
 
- | Angular |	React |	Vue
- --- | --- | --- |
-Corporate lead |	Google	| Facebook	| N/A
-GitHub - watchers |	3,007	| 5,761 |	4,820
-GitHub - stars |	35,272 |	93,928 |	91,449
-GitHub - forks |	8,601 |	17,703 |	13,427
-GitHub – contributors |	622 |	1,177 |	188
-NPM downloads last week	| 663,117	 | 2,417,516 |	342,576
-Indeed.com jobs in DC metro area |	3,000 |	1,000 |	250
-Programming paradigm |	Imperative, Reactive |	Functional |	Imperative, Reactive
-Primary language |	TypeScript |	HTML+JavaScript	| HTML+JavaScript
-Prescriptive |	High	| Low |	Moderate
-Learning curve |	Steep |	Moderate |	Low
-HTML data binding |	Two-way |	One-way |	One-way
-Framework tooling |	Required |	Recommended |	Recommended
+| Category | Angular |	React |	Vue |
+| --- | --- | --- | --- |
+| Corporate lead |	Google	| Facebook	| N/A |
+| GitHub - watchers |	3,007	| 5,761 |	4,820 |
+| GitHub - stars |	35,272 |	93,928 |	91,449 |
+| GitHub - forks |	8,601 |	17,703 |	13,427 |
+| GitHub – contributors |	622 |	1,177 |	188 |
+| NPM downloads last week	| 663,117	 | 2,417,516 |	342,576 |
+| Indeed.com jobs in DC metro area |	3,000 |	1,000 |	250 |
+| Programming paradigm |	Imperative, Reactive |	Functional |	Imperative, Reactive |
+| Primary language |	TypeScript |	HTML+JavaScript	| HTML+JavaScript |
+| Prescriptive |	High	| Low |	Moderate |
+| Learning curve |	Steep |	Moderate |	Low |
+| HTML data binding |	Two-way |	One-way |	One-way |
+| Framework tooling |	Required |	Recommended |	Recommended |
 
 ## Angular
 Angular is a TypeScript-based, open-source front-end web application platform led by the Angular Team at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS. While the current EDDE user interface is written in AngularJS, the level of effort required to move to Angular 5 is comparable to that of any other framework.
@@ -271,11 +271,11 @@ The results of the tests show that the level of effort required in building all 
 
 The general metrics of the frameworks were - likewise - comparable. In terms of the initial and repeated payload sizes, all frameworks performed well once all builds were production-ready.
 
-Framework | No Cache | Reload w/o cache | reload w/ cache |
---- | --- | --- | --- |
-react | 365 KB | 3.3 KB | 0 KB
-vue | 106 KB | 106 KB | 2.6 KB
-ng | 314 KB | 314 KB | 799 B
+| Framework | No Cache | Reload w/o cache | reload w/ cache |
+| --- | --- | --- | --- |
+| react | 365 KB | 3.3 KB | 0 KB |
+| vue | 106 KB | 106 KB | 2.6 KB |
+| ng | 314 KB | 314 KB | 799 B |
 
 All three were well documented in terms of standing up minimal apps. However and incidental reading of each showed that Vue's may have been slightly more robust as it allowed the user to quickly toggle between versions. It should be noted that this distinction is relatively minor and only a contributing factor.
 
